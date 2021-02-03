@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Number Trick</title>
+
+</head>
+
+<body>
+    <main>
+        <h2> This page says </h2>
+
+    </main>
+
+    <script>
+
+        /*
+        Author: Happy Biswas
+        Written Date : 02-01-2021
+        This programm is written for number tricks it will take the user number and add 9 with it.
+        then multiply by 2 and subtract by 4. and devide the result by 2. 
+        and finally it will subtract the userentry number from the remainder
+        The final results will be 7
+        */
+
+        //get the user input with prompt
+        var userEntery = prompt("This a test of the prompt method", 100);
+        //declare a variable and assign a value 
+        var number = 9;
+        var subtotal;
+        // convert userentry string to integer
+        userEntery = parseInt(userEntery);
+        // adding number 9 with user entry value 
+        subtotal = number + userEntery;
+        document.write("I added 9 with " + userEntery + " " + "the new number is  " + subtotal + "\n");
+        document.write("<br>");
+        // multiply the subtotals by 2
+        var multiply = subtotal * 2;
+        document.write("I multiply " + subtotal + " " + "by " + 2 + " " + "the new number is  " + multiply);
+        document.write("<br>");
+
+        // subtract 4 from multiplication value  
+
+        var subtract = multiply - 4;
+
+
+        document.write("I subtract  " + 4 + " " + "from  " + multiply + " the new number is  " + subtract);
+        document.write("<br>");
+        //get the reminder value 
+
+        var remainder = subtract / 2;
+        document.write("I devided  " + subtract + " " + "by   " + 2 + "  " + "the new number is  " + remainder);
+        document.write("<br>");
+        // subtrace the user value from the reminder and getting the final number 
+
+        var result = remainder - userEntery;
+        document.write("I subtracted your original number of   " + userEntery + " " + "from    " + "" + remainder);
+        document.write("<br>");
+        document.write(" <h2>The Final number is: 7! </h2>  ");
+
+        window.alert("The Final Number is " + result);
+
+        document.write("<br>");
+
+        document.write("Thank you for Play again ");
+
+
+    </script>
+
+    <script>
+        // creating a function to create the link 
+        function GFG_Fun() {
+
+            // Create anchor element. 
+            var a = document.createElement('a');
+
+            // Create the text node for anchor element. 
+            var link = document.createTextNode("Click on this link");
+
+            // Append the text node to anchor element. 
+            a.appendChild(link);
+
+            // Set the title. 
+            a.title = "Click on this Link";
+
+            // Set the href property. 
+            a.href = "F:/Java_script/Lab_2/index.html";
+
+            // Append the anchor element to the body. 
+            document.body.appendChild(a);
+        }
+
+    </script>
+
+    <button onclick="GFG_Fun()">
+        click here
+    </button>
+
+
+</body>
+
+
+
+</html>
