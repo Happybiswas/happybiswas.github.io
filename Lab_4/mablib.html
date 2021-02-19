@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Mad Lib</title>
+ 
+  <style>
+    #wrapper {
+      background-color: cornflowerblue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <main>
+      <h2> Fun with Mad Lib </h2>
+
+    </main>
+
+    <img src="Madlib.jpg" width="220" height="300" alt="mad libs logo">
+   
+    <h3> Enter the following information:</h3>
+    
+
+    <input id="pluralNoun" placeholder="a plural noun"><br>
+    <input id="noun1" placeholder="a noun"><br>
+    <input id="noun2" placeholder="another noun"><br>
+    <input id="song" placeholder="song"><br>
+    <input id="verb" placeholder="verb"><br>
+    <br>
+
+    <button type="button" onclick="return getInputValues();">Submit</button>
+
+
+
+    <p>Learning to dirve is a tircky process </p>
+    <br>
+    <span id="outputPluralNoun"> </span>
+    <br>
+    <span id="outputNoun1"> </span>
+    <br>
+    <span id="outputNoun2"> </span>
+    <br>
+    <span id="outputsong"> </span>
+    <br>
+    <span id="outputVerb"> </span>
+
+    <br>
+
+    <button id="GOBTN" disabled>Go Again</button>
+
+    <script>
+
+      function disableBtn() {
+        document.getElementById("GOBTN").disabled = true;
+      }
+
+      function enableBtn() {
+        document.getElementById("GOBTN").disabled = false;
+        document.getElementById("GOBTN").onclick = function () {
+          document.getElementById("outputPluralNoun").innerText = '';
+          document.getElementById("outputNoun1").innerText = '';
+          document.getElementById("outputNoun2").innerText = '';
+          document.getElementById("outputsong").innerText = '';
+          document.getElementById("outputVerb").innerText = '';
+          disableBtn();
+
+        };
+      }
+
+
+      function getInputValues() {
+        var name = document.getElementById("pluralNoun").value;
+        if (name == "") {
+          alert("pluralNoun must be filled out");
+          return false;
+        }
+
+
+
+        var noun1 = document.getElementById("noun1").value;
+        if (noun1 == "") {
+          alert("Noun1 must be filled out");
+          return false;
+        }
+
+
+        var noun2 = document.getElementById("noun2").value;
+        if (noun2 == "") {
+          alert("Noun2 must be filled out");
+          return false;
+        }
+
+
+
+        var song = document.getElementById("song").value;
+        if (song == "") {
+          alert("Song must be filled out");
+          return false;
+        }
+
+
+
+        var verb = document.getElementById("verb").value;
+        if (verb == "") {
+          alert("Verb must be filled out");
+          return false;
+        }
+
+
+
+
+        document.getElementById("outputPluralNoun").innerText = "1. Keep two " + "  " + name.toUpperCase() + " " + "on the Steering  wheel at all time";
+        document.getElementById("outputNoun1").innerText = "2. Step on the  " + " " + noun1.toUpperCase() + "  " + "to speed up and ";
+        document.getElementById("outputNoun2").innerText = "3. slowdown the " + " " + noun2.toUpperCase() + " ";
+        document.getElementById("outputsong").innerText = "4. Sing a  " + " " + song.toUpperCase() + "  " + "loudly";
+        document.getElementById("outputVerb").innerText = "5. To be happy on a " + " " + verb.toUpperCase() + " " + "day";
+
+
+        document.getElementById("pluralNoun").value = '';
+        document.getElementById("noun1").value = '';
+        document.getElementById("noun2").value = '';
+        document.getElementById("song").value = '';
+        document.getElementById("verb").value = '';
+
+        enableBtn();
+
+
+      }
+
+    </script>
+
+
+
+  </div>
+</body>
+
+</html>
