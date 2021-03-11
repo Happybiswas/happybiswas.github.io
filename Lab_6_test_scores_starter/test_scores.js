@@ -5,16 +5,18 @@ var $ = function (id) { return document.getElementById(id); };
 
 function addScore(){
 	var name = $("name").value;
-	if (isNaN!=(name)){
+	if (name.length == 0){
 
-		alert("Intput is not a Stirng");
-		alert("please provide a string input");
+		alert("please enter a name ");
+		
 	}
 	var score = $("score").value;
 	
 	if (isNaN (score)){
 		alert("Intput is not a number") ;
-		alert ("Enter a whole number");
+	}
+	else if (score.length== 0){
+		alert("Enter a number");
 	}
 	names.push(name);
 	scores.push(score);
