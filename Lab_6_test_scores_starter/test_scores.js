@@ -5,7 +5,17 @@ var $ = function (id) { return document.getElementById(id); };
 
 function addScore(){
 	var name = $("name").value;
+	if (isNaN!=(name)){
+
+		alert("Intput is not a Stirng");
+		alert("please provide a string input");
+	}
 	var score = $("score").value;
+	
+	if (isNaN (score)){
+		alert("Intput is not a number") ;
+		alert ("Enter a whole number");
+	}
 	names.push(name);
 	scores.push(score);
 }
