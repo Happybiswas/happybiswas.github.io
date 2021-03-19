@@ -5,21 +5,52 @@ var $ = function (id) { return document.getElementById(id); };
 
 function addScore(){
 	var name = $("name").value;
-	if (name.length == 0){
+	var score = $("score").value;
+	if (name.length == 0 ){
 
-		alert("please enter a name ");
+		alert("Name field are empty ");
 		
 	}
-	var score = $("score").value;
+	else if(score.length==0){
+		alert("Please enter a number in the score filed");
+	}
+	else if(name.length==0 && score.length==0 ){
+		alert("bothe filed are empty");
+	}
+
+	else if ( name.length==0 && (isNaN (score))){
+		alert("You entered a string in socre field");
+	}
+	else if (score>=0 && name.length==0){
+		alert("Name filed is empty");
+	}
 	
+	else if ((name.length !=0) && score.length==0){
+		alert("Please enter a number in the score filed");
+	}
+	
+	
+	
+	else if (name.length !=0 && score.length!=0  ){
+		names.push(name);
+		
+	}
+
 	if (isNaN (score)){
 		alert("Intput is not a number") ;
 	}
-	else if (score.length== 0){
-		alert("Enter a number");
+	else if (score<0){
+		alert("Enter a positive number");
 	}
-	names.push(name);
-	scores.push(score);
+
+	else if (score>=0){
+
+		scores.push(score);
+	}
+	
+	
+	
+	
 }
 
 
