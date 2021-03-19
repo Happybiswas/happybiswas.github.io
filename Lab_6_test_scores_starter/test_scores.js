@@ -31,7 +31,7 @@ function addScore(){
 	
 	
 	
-	else if (name.length !=0 && score.length!=0  ){
+	else if (name.length !=0 && score.length!=0 && score>=0 ){
 		names.push(name);
 		
 	}
