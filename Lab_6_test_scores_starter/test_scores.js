@@ -28,13 +28,6 @@ function addScore(){
 	else if ((name.length !=0) && score.length==0){
 		alert("Please enter a number in the score filed");
 	}
-	
-	
-	
-	else if (name.length !=0 && score.length!=0 && score>=0 ){
-		names.push(name);
-		
-	}
 
 	if (isNaN (score)){
 		alert("Intput is not a number") ;
@@ -42,12 +35,13 @@ function addScore(){
 	else if (score<0){
 		alert("Enter a positive number");
 	}
-
-	else if (score>=0){
-
-		scores.push(score);
-	}
 	
+	
+	else if (name.length !=0 && score.length!=0 && score>=0 ){
+		names.push(name);
+		scores.push(score);
+		
+	}
 	
 	
 	
