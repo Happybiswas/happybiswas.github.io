@@ -1,0 +1,17 @@
+body{
+    background-color:aliceblue;
+
+}
+img{
+    border-width: 0;
+
+}
+
+.centered{
+    text-align: center;
+}
+
+#adBanner {
+    width: 400;
+    height: 250;
+}
