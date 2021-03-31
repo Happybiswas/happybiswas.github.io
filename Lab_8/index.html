@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: The changing caterpillar</title>
+
+        <style>
+            .butterfly {
+                color: orangered;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+    <body>
+
+      
+    <h1>The Caterpillar</h1>
+    
+    <p>This is a <strong>caterpillar</strong> in its natural habitat:</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Monarch_caterpillar_on_swan_plant_branchlet.jpg/640px-Monarch_caterpillar_on_swan_plant_branchlet.jpg" width="400">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <div class="result">
+        
+    </div>
+    
+   
+    <script>
+         $("h1").text("Butterfly!");
+         $("h1").addClass("butterfly");
+         $("p").html("This is a <strong>butterfly</strong> in its natural habitat.");
+         $("img").attr("src", "https://www.kasandbox.org/programming-images/animals/butterfly_monarch.png");
+         $( ".result" ).append( "<p>The <strong>butterfly</strong> wings are transparent and they taste with their feet.</p>" );
+         
+    
+    </script>
+
+
+    
+    </body>
+</html>
