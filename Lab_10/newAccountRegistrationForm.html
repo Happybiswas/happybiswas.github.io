@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery New Account Creation Form</title>
+
+</head>
+<body>
+<h1>jQuery New Account Creation Form</h1>
+<form id="new-account-form">
+<p><input type="email" size="30" name="email" value="" id="email" placeholder="Enter your email address"></p>
+<p><input type="text" size="30" name="password1" value="" id="password1" placeholder="Enter a password"></p>
+<p><input type="text" size="30" name="password2" value="" id="password2" placeholder="Reenter the password"></p>
+<button type="submit">Create Account</button>
+</form>
+<p>Form Output: <span id="output"></span></p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script >
+$("form").submit(function(e){
+e.preventDefault();
+let email = $("#email").val();
+let p1 = $("#password1").val();
+let p2 = $("#password2").val();
+$("#output").append("<br>" + email+".&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> " ); // to add some space use &nbsp;
+
+// passwords matching output
+if(p1 == p2 && p1 != ""){
+$("#output").append(" <b>Passwords are matched.</b>");
+}else if(p1 != "" && p2 != ""){
+$("#output").append("Passwords are not matched.");
+
+}else{
+$("#output").append("Please enter two passwords in the form.");
+}
+return false;
+
+});
+
+</script>
+
+
+</body>
+</html>
