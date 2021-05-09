@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alien Sighting Form</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    #custom-handle {
+      width: 3em;
+      height: 1.6em;
+      top: 50%;
+      margin-top: -.8em;
+      text-align: center;
+      line-height: 1.6em;
+    }
+    </style>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+  <script src="external/jquery/jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+
+
+  
+ 
+  <script>
+    $( function() {
+      var handle = $( "#custom-handle" );
+      $( "#slider" ).slider({
+        create: function() {
+          handle.text( $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+          handle.text( ui.value );
+        }
+      });
+    } );
+
+      </script>
+
+
+
+<script>
+  $( function() {
+$( "#slider-range-max" ).slider({
+  range: "max",
+  min: 1,
+  max: 8,
+  value: 1,
+  slide: function( event, ui ) {
+    $( "#amount" ).val( ui.value );
+  }
+});
+$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+} );
+
+</script>
+    
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+  
+  <script>
+  $( function() {
+    $( "input" ).checkboxradio({
+      icon: false
+    });
+  } );
+  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script>
+  $( function() {
+    $( "#spinner" ).spinner({
+      spin: function( event, ui ) {
+        if ( ui.value > 10 ) {
+          $( this ).spinner( "value", 10 );
+          return false;
+        } else if ( ui.value < 0 ) {
+          $( this ).spinner( "value", 0 );
+          return false;
+        }
+      }
+    });
+  } );
+  </script>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+ <script>
+   $( function() {
+     $( "#spinner1" ).spinner({
+       spin: function( event, ui ) {
+         if ( ui.value > 10 ) {
+           $( this ).spinner( "value", 10 );
+           return false;
+         } else if ( ui.value < 0 ) {
+           $( this ).spinner( "value", 0 );
+           return false;
+         }
+       }
+     });
+   } );
+   </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script>
+$( function() {
+  $( "#spinner2" ).spinner({
+    spin: function( event, ui ) {
+      if ( ui.value > 10 ) {
+        $( this ).spinner( "value", 10 );
+        return false;
+      } else if ( ui.value < 0 ) {
+        $( this ).spinner( "value", 0 );
+        return false;
+      }
+    }
+  });
+} );
+</script>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#dialog" ).dialog({
+        autoOpen: false,
+        show: {
+          effect: "blind",
+          duration: 1000
+        },
+        hide: {
+          effect: "explode",
+          duration: 1000
+        }
+      });
+   
+      $( "#opener" ).on( "click", function() {
+        $( "#dialog" ).dialog( "open" );
+      });
+    } );
+    </script>
+
+
+</head>
+<body>
+
+    <div class="widget">
+        <h1>Alien Sighting Form</h1>
+      </div>
+        <h2>Sighting Date</h2>
+        <p><input type="text" id="datepicker"></p><br>
+
+
+        <h2>Select a Alien:</h2>
+
+        <fieldset>
+          <legend>Select a Location: </legend>
+          
+          <input type="radio" name="radio-1" id="radio-1">
+          <label for="radio-1">Human-like</label>
+          <input type="radio" name="radio-1" id="radio-2">
+          <label for="radio-2">Worm-like</label>
+          <input type="radio" name="radio-1" id="radio-3">
+          <label for="radio-3">Insect-like</label>
+          <input type="radio" name="radio-1" id="radio-4">
+          <label for="radio-4">Fish-like</label>
+          <input type="radio" name="radio-1" id="radio-5">
+          <label for="radio-5">Bird-like</label>
+        </fieldset>
+     
+
+        <h3>Weight in pounds:</h3>
+        
+        <div id="slider">
+          <div id="custom-handle" class="ui-slider-handle"></div>
+        </div>
+
+        <h3>Height in ft:</h3>
+       
+        <p>
+         
+          <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+          <div id="slider-range-max"></div>
+        </p>
+        
+
+        <p>
+          <label for="spinner">Number of Eyes:</label><br>
+          <input id="spinner" name="value">
+        </p>
+
+
+        <p>
+          <label for="spinner1">Number of Arms:</label><br>
+          <input id="spinner1" name="value">
+        </p>
+
+        <p>
+          <label for="spinner2">Number of Legs:</label><br>
+          <input id="spinner2" name="value">
+        </p>
+        <div id="dialog" title="Thank you">
+          <p>Your form has been submitted. You can closed this window with the &apos;x&apos; icon.</p>
+        </div>
+         
+        <button id="opener">Send Report</button>
+      
+      
+</body>
+
+
+
+</html>
